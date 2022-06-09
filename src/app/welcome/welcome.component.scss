@@ -1,13 +1,38 @@
-.welcome{
-    position:absolute;
-    width: 300%;
-    background-color: blueviolet;
-//     display: flex;
-//     flex-direction: column;
-//     // justify-content: center;
-//     align-items: center;
-//     margin-top: 5em;
-// overflow-x: auto;
-// background-repeat: no-repeat;
-      
+.welcome {
+    position: absolute;
+    width: 200%;
+
+    //     // background-color: blueviolet;
+    // //     display: flex;
+    // //     flex-direction: column;
+
+    // //     align-items: center;
+    //     margin-top: 5em;
+    // overflow-x: auto;
+    // background-repeat: no-repeat;
+
+}
+
+img {
+    width: 50%;
+    height: 0%;
+}
+
+.mission-section_sub-title1{
+    color: rgb(6, 179, 49);
+    font-size: 2em;
+    font-weight: bold;
+    width: 18em;
+    margin: 1em;
+    text-align: center;
+
+}
+
+.mission-section_sub-title2{
+    color: rgb(6, 179, 49);
+    font-size: 1em;
+    font-weight: bold;
+    width: 18em;
+    margin: 1em;
+    text-align: center;
 }
