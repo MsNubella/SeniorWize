@@ -16,6 +16,8 @@ $viewer-distance: 250px;
 
 .carousel {
 	padding: 20px;
+	background-color:rgb(158, 158, 203);
+	margin-top: -1%;
 
 	perspective: $viewer-distance;
 	overflow: hidden;
@@ -23,6 +25,7 @@ $viewer-distance: 250px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 	> * {
 		flex: 0 0 auto;
 	}
@@ -36,6 +39,7 @@ $viewer-distance: 250px;
 		
 		img {
 			width: 100%;
+			height: 110%;
 			box-sizing: border-box;
 			padding: 0 $item-separation / 2;
 			
@@ -55,12 +59,13 @@ $viewer-distance: 250px;
 		button {
 			flex: 0 0 auto;
 			margin: 0 5px;
+			font-weight: bold;
 			
 			cursor: pointer;
 			
 			color: #333;
 			background: none;
-			border: 1px solid;
+			border: 3px solid;
 			letter-spacing: 1px;
 			padding: 5px 10px;
 		}

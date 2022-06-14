@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     color: black;
-    background-color: rgb(46, 165, 46);
+    background-color: rgb(63, 177, 247);
     position: fixed;
     width: 100%;
     top: 0;
@@ -12,23 +12,27 @@
     
   .senior{
 
-    color: white;
-    font-size: xx-large;
+    color:  rgb(14, 16, 115);
+    font-size: 50px;
     font-weight: bold;
+    text-align: center;
   }
     &_logo {
       width: 4em;
-      height: 3em;
+      height: 4em;
       background-repeat: no-repeat;
     }
   
     &_signin {
       margin: 1em;
       &_btn {
-        background-color: #de0c3a;
+        background-color: #9e2c7a;
         padding: 0.7em;
         border-radius: 50px;
         margin: 1em;
+        color: white;
+        
+        
       }
     }
   }

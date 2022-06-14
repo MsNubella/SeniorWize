@@ -1,7 +1,7 @@
 .welcome {
     display: flex;
     flex-direction: column;
-    margin-top: 20em;
+    margin-top: 2.5em;
 
     &_title-section {
         position: relative;
@@ -12,18 +12,7 @@
 
         &_section-sub-title1 {
             color: rgb(6, 179, 49);
-            font-size: 2em;
-            font-weight: bold;
-            width: 18em;
-            margin: 1em;
-            text-align: center;
-            z-index: 1;
-            position: absolute;
-        }
-
-        &_section-sub-title2 {
-            color: rgb(6, 179, 49);
-            font-size: 1em;
+            font-size: 3em;
             font-weight: bold;
             width: 18em;
             margin: 1em;
@@ -32,11 +21,23 @@
             position: absolute;
             top: 50%;
         }
+
+        &_section-sub-title2 {
+            color: black;
+            font-size: 2em;
+            font-weight: bold;
+            width: 18em;
+            margin: 1em;
+            text-align: center;
+            z-index: 1;
+            position: absolute;
+            top: 90%;
+        }
     }
 
     &_section-img {
-       width: 100%;
-        height: 50em;
+        width: 100%;
+        height: 100%;
     }
 
 
