@@ -1,11 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
+  selectedImg: any = 0
+  titles = ["Housekeeping",
+    "Handyman Services",
+    "Mail Services",
+    "Referrals",
+    "Phone a Friend",
+    "Food Delivery",
+    "Senior Transporation",
+  ];
+
 
   constructor() { }
 
@@ -18,7 +29,7 @@ export class CarouselComponent implements OnInit {
       }
     });
 
-    function carousel(root:any) {
+    const carousel = (root: any) => {
       var
         figure = root.querySelector('figure'),
         nav = root.querySelector('nav'),
@@ -29,15 +40,44 @@ export class CarouselComponent implements OnInit {
 
         theta = 2 * Math.PI / n,
         currImage = 0;
+      this.selectedImg = 0;
 
       setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
       window.addEventListener('resize', () => {
         setupCarousel(n, parseFloat(getComputedStyle(images[0]).width))
       });
+      const setupNavigation = () => {
+
+
+        const onClick = (e: any) => {
+          e.stopPropagation();
+
+          var t = e.target;
+          if (t.tagName.toUpperCase() != 'BUTTON')
+            return;
+
+          if (t.classList.contains('next')) {
+            currImage++;
+            if (this.titles.length - 1 < currImage) {
+              this.selectedImg = this.selectedImg +1
+            }
+            else { this.selectedImg = currImage }
+
+          }
+
+          else {
+            currImage--;
+            this.selectedImg = currImage
+          }
+
+          rotateCarousel(currImage);
+        }
+        nav.addEventListener('click', onClick, true);
+      }
 
       setupNavigation();
 
-      function setupCarousel(n:any, s:any) {
+      function setupCarousel(n: any, s: any) {
         var
           apothem = s / (2 * Math.tan(Math.PI / n));
 
@@ -56,29 +96,8 @@ export class CarouselComponent implements OnInit {
         rotateCarousel(currImage);
       }
 
-      function setupNavigation() {
-        nav.addEventListener('click', onClick, true);
 
-        function onClick(e:any) {
-          e.stopPropagation();
-
-          var t = e.target;
-          if (t.tagName.toUpperCase() != 'BUTTON')
-            return;
-
-          if (t.classList.contains('next')) {
-            currImage++;
-          }
-          else {
-            currImage--;
-          }
-
-          rotateCarousel(currImage);
-        }
-
-      }
-
-      function rotateCarousel(imageIndex:any) {
+      function rotateCarousel(imageIndex: any) {
         figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
       }
 

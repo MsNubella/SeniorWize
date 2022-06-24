@@ -1,7 +1,6 @@
 <div class="carousel" data-gap="20" data-bfc>
 	<figure>
 		<img src="../assets/image/housekeeping.jpg" alt="">
-		<!-- <img src="../assets/image/seniorwize background.jpg" alt=""> -->
 		<img src="../assets/image/handyman services.jpg" alt="">
 		<img src="../assets/image/Mail.jpg" alt="">
 		<img src="../assets/image/referrals 3.jpg" alt="">
@@ -10,10 +9,13 @@
 		<img src="../assets/image/senior trans 2.jpg" alt="">
 	</figure>
 	<nav>
-		<span></span>
-		<span></span>
-		
-		<button class="nav prev">Prev</button>
-		<button class="nav next">Next</button>
+		<div><span>{{titles[selectedImg]}}</span>
+		</div>
+
+		<br>
+		<div><button class="nav prev">Prev</button>
+			<button class="nav next">Next</button>
+		</div>
+		<br>
 	</nav>
 </div>
